@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin:20px;
+
+            animation-duration: 2s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: relative;
+        }
+
+        .box1 {
+            animation-name: ani1;
+
+            /* position: relative;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+
+            /* animation-delay: 2s; */
+        }
+
+        .box2 {
+            animation-name: ani2;
+            
+            /* position: relative;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+            
+            /* animation-delay: 2s; */
+        }
+
+        .box3 {
+            animation-name: ani3;
+
+            /* position: relative;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+            
+            /* animation-delay: 2s; */
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        }
+
+        /* .box1:hover, .box2:hover, .box3:hover {
+            animation-play-state: paused;
+        } */
+
+        @keyframes ani1 {
+            0% {
+                background-color: blue;
+                /* margin-left: 20px; */
+                left:0px;
+            }
+            50% {
+                background-color: orange;
+                /* margin-left: 120px; */
+                left:100px;
+            }
+            100% {
+                background-color: pink;
+                /* margin-left: 220px; */
+                left:200px;
+            }
+        }
+
+
+        @keyframes ani2 {
+            0% {
+                background-color: blue;
+                top: 0px;
+            }
+            50% {
+                background-color: orange;
+                top: 100px;
+            }
+            100% {
+                background-color: pink;
+                top: 200px;
+            }
+        }
+
+        @keyframes ani3 {
+            0% {
+                background-color: blue;
+                top: 0px;
+                left: 0px;
+            }
+            50% {
+                background-color: orange;
+                top: 100px;
+                left: 100px;
+            }
+            100% {
+                background-color: pink;
+                top: 200px;
+                left: 200px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+
+</body>
+</html>
