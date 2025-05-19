@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+
+        .back-red {
+            background-color: red;
+        }
+
+        .back-blue {
+            background-color: blue;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <button onclick="changeColor()">배경색 바꾸기</button>
+
+    <script>
+        /* 코딩부분 */
+        
+        function changeColor(){
+            let input = prompt("1번 빨간색 2번 파란색 선택");
+            console.log(input);
+
+            const box = document.getElementsByClassName('box')[0];
+
+            //1->red
+            //2->blue
+            if(input == 1){
+                console.log('red');
+                //box.style.backgroundColor = 'red';
+
+                //box.classList.add('back-red');
+                //box.classList.remove('back-blue');
+
+                box.setAttribute('class', 'box back-red');
+
+            } else if(input == 2){
+                console.log('blue');
+                
+                //box.style.backgroundColor = 'blue';
+
+                //box.classList.add('back-blue');
+                //box.classList.remove('back-red');
+
+                box.setAttribute('class', 'box back-blue');
+            } else {
+                //다른값, 취소, 공백
+                alert('잘못입력함');
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
